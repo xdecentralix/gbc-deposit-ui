@@ -8,7 +8,7 @@ export const config = createConfig({
   connectors: [coinbaseWallet({ appName: "Gnosis Deposit" }), walletConnect({ projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID || "" }), metaMask({dappMetadata: {name: "Gnosis Deposit"}})],
   ssr: true,
   transports: {
-    [gnosis.id]: http("https://rpc.gnosischain.com/"),
+    [gnosis.id]: http("https://gnosis-rpc.publicnode.com"),
     [gnosisChiado.id]: http("https://rpc.chiadochain.net"),
   },
 });
